@@ -1,0 +1,12 @@
+[Unit]
+Description=coap web api
+After=network.target
+
+[Service]
+Type=simple
+User=openhabian
+ExecStart=/usr/bin/node /usr/local/bin/coap_api/coapapi.js
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
